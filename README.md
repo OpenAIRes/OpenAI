@@ -29,3 +29,10 @@ npm run interactive
 ```
 
 Type messages and press <kbd>Enter</kbd>. Use `exit` to quit the session.
+
+## Next Steps
+
+Once you are comfortable running the basic scripts, you can reuse the same ChatGPT calls in other contexts. See [docs/integration.md](docs/integration.md) for examples of:
+
+- Adding a web API endpoint with Express
+- Embedding the `chat` function in your own CLI tool

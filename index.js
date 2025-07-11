@@ -13,10 +13,13 @@ async function chat(prompt) {
   }
 }
 
-const prompt = process.argv.slice(2).join(' ');
-if (!prompt) {
-  console.error('Usage: node index.js <your prompt>');
-  process.exit(1);
+if (require.main === module) {
+  const prompt = process.argv.slice(2).join(' ');
+  if (!prompt) {
+    console.error('Usage: node index.js <your prompt>');
+    process.exit(1);
+  }
+  chat(prompt);
 }
 
-chat(prompt);
+module.exports = { chat };
