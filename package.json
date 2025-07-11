@@ -3,6 +3,7 @@
     "openai": "^5.9.0"
   },
   "scripts": {
-    "chat": "node index.js"
+    "chat": "node index.js",
+    "interactive": "node interactive.js"
   }
 }
