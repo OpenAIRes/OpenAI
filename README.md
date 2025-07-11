@@ -30,6 +30,18 @@ npm run interactive
 
 Type messages and press <kbd>Enter</kbd>. Use `exit` to quit the session.
 
+### HTTP API
+
+An Express server is included for exposing the same ChatGPT functionality over
+HTTP. Start it with:
+
+```bash
+npm run server
+```
+
+Send a POST request containing `{ "message": "Your prompt" }` to
+`http://localhost:3000/chat` and the server will respond with ChatGPT's reply.
+
 ## Next Steps
 
 Once you are comfortable running the basic scripts, you can reuse the same ChatGPT calls in other contexts. See [docs/integration.md](docs/integration.md) for examples of:
