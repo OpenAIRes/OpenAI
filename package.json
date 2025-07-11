@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "openai": "^5.9.0"
+  },
+  "scripts": {
+    "chat": "node index.js"
+  }
+}
