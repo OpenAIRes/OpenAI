@@ -31,3 +31,17 @@ npm run interactive
 ```
 
 Type messages and press Enter to send them. Use `exit` to quit.
+
+## API Configuration
+
+You can adjust request parameters like `model` and `temperature` via environment
+variables. Set them in your `.env` file:
+
+```bash
+echo "OPENAI_MODEL=gpt-4o" >> .env
+echo "OPENAI_TEMPERATURE=0.7" >> .env
+```
+
+These values are passed directly to `client.chat.completions.create`. See the
+[Chat Completions API docs](https://platform.openai.com/docs/api-reference/chat/create)
+for details on available parameters.
