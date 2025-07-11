@@ -1,4 +1,6 @@
 const OpenAI = require('openai');
+// Load variables from the .env file so your API key and other settings remain
+// outside the codebase.
 require('dotenv').config();
 const readline = require('readline');
 const fs = require('fs');

@@ -12,6 +12,15 @@ echo "OPENAI_API_KEY=your-key" > .env
 
 The script loads this file automatically using [dotenv](https://www.npmjs.com/package/dotenv).
 
+## Environment Management
+
+Configuration values such as your API key are stored in a local `.env` file.
+When the application starts, `require('dotenv').config()` reads this file and
+places each `KEY=value` pair into `process.env`. Your code can then access the
+OpenAI key via `process.env.OPENAI_API_KEY` without exposing it in the source
+code. Because `.env` is ignored by git, the key remains on your machine and
+doesn't get committed to the repository.
+
 ## Usage
 
 Install dependencies (already installed in this environment) and run the script with your prompt:
