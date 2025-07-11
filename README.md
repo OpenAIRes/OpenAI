@@ -4,11 +4,13 @@ This project demonstrates a minimal ChatGPT integration using the [openai](https
 
 ## Prerequisites
 
-Set your OpenAI API key in the `OPENAI_API_KEY` environment variable.
+Create a `.env` file and set your OpenAI API key in it:
 
 ```bash
-export OPENAI_API_KEY=your-key
+echo "OPENAI_API_KEY=your-key" > .env
 ```
+
+The script loads this file automatically using [dotenv](https://www.npmjs.com/package/dotenv).
 
 ## Usage
 
