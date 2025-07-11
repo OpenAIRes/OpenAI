@@ -4,6 +4,11 @@ const readline = require('readline');
 
 const client = new OpenAI();
 
+const model = process.env.OPENAI_MODEL || 'gpt-4o';
+const temperature = process.env.OPENAI_TEMPERATURE
+  ? parseFloat(process.env.OPENAI_TEMPERATURE)
+  : undefined;
+
 async function startChat() {
   const rl = readline.createInterface({
     input: process.stdin,
@@ -25,8 +30,9 @@ async function startChat() {
     messages.push({ role: 'user', content: input });
     try {
       const completion = await client.chat.completions.create({
-        model: 'gpt-4o',
-        messages
+        model,
+        messages,
+        temperature,
       });
 
       const response = completion.choices[0].message.content.trim();
