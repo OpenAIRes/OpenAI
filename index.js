@@ -1,4 +1,6 @@
 const OpenAI = require('openai');
+// Load environment variables from the local .env file so secrets aren't
+// hard-coded. Variables like OPENAI_API_KEY become available on process.env.
 require('dotenv').config();
 const client = new OpenAI();
 
