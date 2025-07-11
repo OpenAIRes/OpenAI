@@ -19,3 +19,13 @@ npm run chat -- "Hello, ChatGPT!"
 ```
 
 The ChatGPT response will be printed to the console.
+
+### Interactive conversation
+
+You can also start an interactive session that keeps track of the conversation history:
+
+```bash
+npm run interactive
+```
+
+Type messages and press <kbd>Enter</kbd>. Use `exit` to quit the session.
