@@ -40,7 +40,10 @@ variables. Set them in your `.env` file:
 ```bash
 echo "OPENAI_MODEL=gpt-4o" >> .env
 echo "OPENAI_TEMPERATURE=0.7" >> .env
+echo "OPENAI_MAX_RETRIES=3" >> .env
 ```
+The `OPENAI_MAX_RETRIES` value controls how many times the scripts retry a
+failed API request before giving up.
 
 These values are passed directly to `client.chat.completions.create`. See the
 [Chat Completions API docs](https://platform.openai.com/docs/api-reference/chat/create)
