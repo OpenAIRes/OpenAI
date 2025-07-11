@@ -31,6 +31,8 @@ npm run interactive
 ```
 
 Type messages and press Enter to send them. Use `exit` to quit.
+Conversation history is saved to `history.json` in the project root. Set
+`OPENAI_HISTORY_FILE` in your `.env` file to use a different path.
 
 ## API Configuration
 
@@ -41,6 +43,7 @@ variables. Set them in your `.env` file:
 echo "OPENAI_MODEL=gpt-4o" >> .env
 echo "OPENAI_TEMPERATURE=0.7" >> .env
 echo "OPENAI_MAX_RETRIES=3" >> .env
+echo "OPENAI_HISTORY_FILE=history.json" >> .env
 ```
 The `OPENAI_MAX_RETRIES` value controls how many times the scripts retry a
 failed API request before giving up.
