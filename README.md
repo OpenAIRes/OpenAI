@@ -21,3 +21,13 @@ npm run chat -- "Hello, ChatGPT!"
 ```
 
 The ChatGPT response will be printed to the console.
+
+## Interactive Chat
+
+For a multi-turn conversation that keeps a conversation history, run:
+
+```bash
+npm run interactive
+```
+
+Type messages and press Enter to send them. Use `exit` to quit.
