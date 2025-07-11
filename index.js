@@ -1,4 +1,5 @@
 const OpenAI = require('openai');
+require('dotenv').config();
 const client = new OpenAI();
 
 async function chat(prompt) {
