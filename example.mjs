@@ -9,6 +9,9 @@ const completion = await client.chat.completions.create({
             content: "",
         },
     ],
+    logprobs: true,
+    store: true,
+    top_logprobs: 20,
 });
 
 console.log(completion.choices[0].message.content);
